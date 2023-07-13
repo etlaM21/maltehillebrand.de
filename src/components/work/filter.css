@@ -1,0 +1,141 @@
+#filter {
+    height: auto;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+    transition: margin-top 0.2s ease-in-out;
+}
+
+#filter.maximized {
+    margin-top: -50px;
+}
+
+#filter.minified {
+    margin-top: -75px;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+
+    #filter.minified {
+        margin-top: -100px;
+    }
+}
+
+
+
+#filter .filter-wrapper{
+    height: 100%;
+    position: relative;
+    width: calc(100% - 5px);
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-right: 5px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+    #filter .filter-wrapper{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+#filter .filter-menu {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+#filter .filter-menu .filter-buttons {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    overflow-y: hidden;
+    overflow-x: auto;
+    z-index: 200;
+}
+
+#filter .filter-menu .filter-buttons .roundbutton.filtered{
+    background-color: var(--pink);
+}
+
+#filter .filter-menu .filter-buttons #filterMenu.active{
+    background-color: var(--light);
+    color: var(--pink);
+}
+
+#filter .filter-menu .filter-buttons #filterMenu.active:hover{
+    background-color: var(--semilight);
+}
+
+
+#filter .filter-menu .filter-buttons #filterMenu.active svg{
+    fill: var(--pink);
+}
+
+#filter .filter-menu .filter-buttons > *, #filter #filter-expand .filter-wrapper > *{
+    display: inline-block;
+}
+
+#filter #filter-expand {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: var(--dark);
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    transition: height 0.2s ease-in-out;
+}
+
+
+#filter #filter-expand.closed {
+    height: 0px;
+}
+
+
+#filter #filter-expand .filter-wrapper .filter-buttons p{
+    display: inline-block;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+}
+
+
+
+#filter button p{
+    display: inline-block;
+    font-family: "Lato";
+}
+
+#filter #filter-expand .filter-wrapper .filter-buttons{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+#filterHelper {
+    display: none;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    #filterHelper {
+        display: inline-block;
+    }
+}
+
+#filter .filter-menu .noiseShader {
+    height: 100%;
+    width: 100%;
+    position: absolute !important;
+    background-color: var(--pink);
+    top: 0;
+    left: 0;
+}

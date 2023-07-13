@@ -1,0 +1,75 @@
+.inline-gallery {
+  display: block;
+  white-space:nowrap;
+
+  height: 100%;
+  width: calc(100%- 2rem);
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.inline-gallery::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.inline-gallery .pic {
+  position: relative;
+  display: inline-block;
+  width: 32rem;
+  height: 24rem;
+  
+  border-radius: 15px;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: var(--dark);
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+
+  transition: border-color 0.2s ease-in-out, border-radius 0.4s ease-in-out;
+ /* transition-property: left;
+  transition-duration: 20s;
+  transition-timing-function: cubic-bezier(0.150, 0.000, 0.850, 1.000);
+  left:0%; */
+}
+
+.inline-gallery .pic .parallax {
+    position: absolute;
+    top: -50px;
+    left:0;
+    width: 100%;
+    height: calc(100% + 100px);
+    transition: top 0.2s ease-in-out, height 0.2s ease-in-out;
+  }
+  
+.inline-gallery .pic .parallax img, .inline-gallery .pic .paralla video {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: object-fit 0.2s ease-in-out;
+  }
+  
+
+.inline-gallery .pic:hover {
+  border-color: transparent;
+  border-radius: 0px;
+}
+
+.inline-gallery .pic:hover .parallax {
+  top: 0px;
+  height: 100%;
+}
+
+.inline-gallery .pic:hover .parallax img,  .inline-gallery .pic:hover .parallax video{
+  object-fit: contain;
+}

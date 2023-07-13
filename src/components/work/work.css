@@ -1,0 +1,14 @@
+#work {
+    background:  var(--dark);
+    background: linear-gradient(180deg, var(--pink) 50%, var(--light) 100%);
+    background-color: #000;
+    margin-bottom: 3.2rem;
+    margin-top: 100px;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    #work {
+        margin-top: 150px;
+    }
+}

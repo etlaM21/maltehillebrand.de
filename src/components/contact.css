@@ -1,0 +1,121 @@
+#contactPage {
+    margin-top: 100px;
+    min-height: calc(100vh - 125px);
+}
+
+.contactContentWrapper {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+#contact-form {
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group:nth-of-type(2){ /* HIDE URL FOR SPAM BOTS */
+    display: none;
+}
+
+.form-group label {
+    font-family: "Lato";
+    color: var(--pink);
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.form-group input {
+    font-family: "Lato";
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px;
+    background-color: transparent;
+    border-color: var(--dark);
+    border-width: 1.5px;
+    border-style: solid;
+    color: var(--dark);
+}
+.form-group textarea {
+    font-family: "Lato";
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px;
+    background-color: transparent;
+    border-color: var(--dark);
+    border-width: 1.5px;
+    border-style: solid;
+    color: var(--dark);
+}
+
+
+#contact-form  #submitbutton {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#contact-form  #submitbutton p{
+    font-size: 1.6rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+#contact-form  #submitbutton svg {
+    width: 1.6rem;
+}
+
+#contact-form  #submitbutton svg.leftIcon {
+    margin-right: 0.8rem;
+    margin-left: -0.8rem;
+}
+
+#contact-form  #submitbutton:hover > .buttonContent.rightIconHidden {
+    left: calc(-1.2rem);
+}
+
+
+#contact-form  #submitbutton:hover > .buttonContent.rightIconHidden  .leftIcon {
+    transform: translateX(-2.4rem) translateY(-50%);
+}
+
+#contact-form  #submitbutton:hover > .buttonContent p{
+    transform: translateX(-0.8rem) translateY(-50%);
+}
+
+#contact-form  #submitbutton .buttonContent.rightIconHidden .rightIcon {
+    transform: translateX(2.4rem) translateY(-45%);
+}
+
+#contact-form  #submitbutton:hover > .buttonContent.rightIconHidden  .rightIcon {
+    transform: translateX(-0.2rem) translateY(-45%);
+}
+
+
+.contactContentWrapper p {
+    font-family: "Lato";
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+.contactContentWrapper p a {
+    font-weight: bold;
+    color: var(--pink);
+    text-decoration: none;
+}

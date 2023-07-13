@@ -1,0 +1,26 @@
+#projects {
+    margin-top: 100px;
+}
+
+.projectWrapper {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3.2rem;
+}
+
+.projectContenttWrapper {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.projectGallery {
+    position: relative;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

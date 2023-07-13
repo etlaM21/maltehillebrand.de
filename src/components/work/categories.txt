@@ -1,0 +1,17 @@
+FILTERCATEGORIES
+"Highlight"
+"Graphic"
+"Motion"
+"Experience"
+
+GALLERYCATEGORIES
+"graphicdesign"
+"webdesign"
+"motiongraphics"
+"augmentedreality"
+-
+"xerx3s"
+"chromesthesia"
+"sehsuechte"
+"rudydelorean"
+"sk1ns"

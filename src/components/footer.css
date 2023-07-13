@@ -1,0 +1,20 @@
+#Footer {
+    width: 100%;
+    height: 25px;
+    background-color: var(--pink);
+}
+
+#Footer-content {
+    position: relative;
+    height: auto;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+#Footer-content a{
+    font-weight: bold;
+    color: var(--light);
+    font-size: 0.8rem;
+    margin-right: 1.6rem;
+}

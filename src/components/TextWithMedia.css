@@ -1,0 +1,162 @@
+.text-with-media {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    .text-with-media {
+        display: flex;
+    }
+    
+    .text-with-media.left {
+        flex-direction: row;
+    }
+
+    .text-with-media.right {
+        flex-direction: row-reverse;
+    }
+}
+
+.pic {
+    position: relative;
+    width: calc(100% - 20px);
+    height: 32rem;
+    border-radius: 15px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: var(--dark);
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    transition: border-color 0.2s ease-in-out, border-radius 0.4s ease-in-out;
+}
+
+.pic:hover {
+    border-color: transparent;
+    border-radius: 0px;
+}
+
+.pic:hover .parallax {
+    top: 0px;
+    height: 100%;
+  }
+
+.pic:hover .parallax img,.pic:hover .parallax video {
+    object-fit: contain;
+  }
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    .pic {
+        width: calc(40% - 20px);
+    }
+    .pic.left {
+        margin-left: 10px;
+    }
+    .pic.right {
+        margin-right: 10px;
+    }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+    .pic {
+        width: 40%;
+    }
+    .pic.left {
+        margin-left: 0;
+    }
+    .pic.right {
+        margin-right: 0;
+    }
+}
+
+.pic .parallax {
+  position: absolute;
+  top: -50px;
+  left:0;
+  width: 100%;
+  height: calc(100% + 100px);
+  transition: top 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.pic .parallax img,.pic .parallax video {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: object-fit 0.2s ease-in-out;
+}
+
+.text {
+    position: relative;
+    width: calc(100% - 20px);
+    color: var(--dark);
+    display: inline-block;
+    right: 0;
+    top: 0;
+    margin-left: 10px;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    .text {
+        width: 50%;
+        top: 0;
+    }
+    .text.right {
+        right: 20px;
+        margin-left: 9%;
+    }
+    .text.left {
+        left: 20px;
+        margin-right: 9%;
+    }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+    .text.right {
+        right: 0;
+    }
+    .text.left {
+        left: 0;
+    }
+    
+}
+
+.text h1 {
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    .text h1{
+        font-size: 3rem;
+        margin-top: 0;
+    }
+}
+
+
+
+.text p {
+    font-family: "Lato";
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+.text p a {
+    font-weight: bold;
+    color: var(--pink);
+    text-decoration: none;
+}
