@@ -8,6 +8,7 @@ const Footer = () => {
         <div id="Footer-content">
           <Link to={"/imprint"} relative="path">Imprint</Link>
           <Link to={"/privacy"} relative="path">Privacy Policy</Link>
+          <a href="https://github.com/etlaM21/maltehillebrand.de" target="_blank" rel="noreferrer">Source Code</a>
         </div>
     </div>
   )
