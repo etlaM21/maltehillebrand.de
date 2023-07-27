@@ -4,6 +4,7 @@ import packery from 'isotope-packery';
 import "./masonry.css";
 import RoundButton from "../RoundButton"
 import { Link } from 'react-router-dom';
+import Loader from '../Loader';
 
 const Masonry = ({elements, filterKey}) => {        
     // ISOTOPE AND REACT JS BY https://stackoverflow.com/a/58446038
@@ -54,6 +55,7 @@ const Masonry = ({elements, filterKey}) => {
                     return (
                         <Link to={"/gallery/" + elm.galleryID + "/" + elm.galleryIndex} relative="path" key={elm.id}>
                             <div className={classUsed} key={elm.title}>
+                                <Loader />
                                 <div className="grid-item-desc">
                                     <div className="grid-item-desc-content">
                                         <RoundButton text={elm.title} fill={true} inverted={true} hover={false} />
@@ -61,8 +63,19 @@ const Masonry = ({elements, filterKey}) => {
                                     </div>
                                 </div>
                                 { elm.type === "image" ?
-                                <img src={elm.src} alt={elm.title} onLoad={(event) => {let img = event.target; if(img.width >= img.height) event.target.classList.add("horizontal"); isotope.current?.arrange()}}/>
-                                :  <video src={elm.src} alt={elm.title} onLoadedData={(event) => {let vid = event.target; if(vid.videoWidth >= vid.videoHeight) event.target.classList.add("horizontal"); vid.defaultMuted = true; vid.muted = true; isotope.current?.arrange()}} autoPlay={true} loop={true} muted={true} playsInline={true} />
+                                <img src={elm.src} alt={elm.title} onLoad={(event) => {
+                                    let img = event.target;
+                                    if(img.width >= img.height) event.target.classList.add("horizontal");
+                                    isotope.current?.arrange();
+                                    event.target.parentNode.parentNode.getElementsByClassName("loader")[0].style.display = "none";
+                                }}/>
+                                :  <video src={elm.src} alt={elm.title} onLoadedData={(event) => {
+                                    let vid = event.target;
+                                    if(vid.videoWidth >= vid.videoHeight) event.target.classList.add("horizontal");
+                                    vid.defaultMuted = true; vid.muted = true;
+                                    isotope.current?.arrange();
+                                    event.target.parentNode.parentNode.getElementsByClassName("loader")[0].style.display = "none";
+                                }} autoPlay={true} loop={true} muted={true} playsInline={true} />
                                 }
                                 
                             </div>
