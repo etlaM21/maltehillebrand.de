@@ -1,0 +1,62 @@
+#reel-wrapper {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    background-color: var(--pink);
+}
+
+#reel-content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 25px;
+    color: var(--light);
+    background-color: var(--pink);
+}
+
+#reel-content h1 {
+    text-align: center;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+#reel-content p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+#reel-content video {
+    width: 100%;
+    height: auto;
+}
+
+#reel-text {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    #reel-wrapper {
+        margin-top: 100px;
+
+    }
+    #reel-content h1 {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    #reel-content video {
+        width: calc(66.6% - 0.5rem);
+        display: inline-block;
+    }
+
+    #reel-text {
+        width: calc(33.3% - 0.5rem);
+        display: inline-block;
+        margin-top: 0rem;
+        margin-left: 1rem;
+        vertical-align:top 
+    }
+}

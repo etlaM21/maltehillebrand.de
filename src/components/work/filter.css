@@ -1,7 +1,8 @@
 #filter {
     height: auto;
     width: 100vw;
-    position: fixed;
+    position: sticky;
+    top: 50px;
     z-index: 100;
     transition: margin-top 0.2s ease-in-out;
 }
@@ -10,14 +11,14 @@
     margin-top: -50px;
 }
 
-#filter.minified {
-    margin-top: -75px;
+#filter.minified, #filter.maximized {
+    margin-top: -100px;
 }
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em) {
 
-    #filter.minified {
+    #filter.minified, #filter.maximized {
         margin-top: -100px;
     }
 }

@@ -9,6 +9,8 @@ import Loader from "./Loader";
 import WorkData from "./components/work/WorkData";
 import GalleryData from "./components/work/gallery/GalleryData";
 
+const Reel = lazy(() => import( "./components/Reel"));
+
 const Work = lazy(() => import( "./components/work/Work"));
 
 const Gallery  = lazy(() => import( "./components/work/gallery/Gallery"));
@@ -84,6 +86,7 @@ function WorkPage(){
     <>
       <Header pages={["work", "projects", "contact"]} activePage={"work"}/>
       <Suspense fallback={<Loader />}>
+        <Reel />
         <Work elements={item} categories={categories}/>
         <About />
       </Suspense>

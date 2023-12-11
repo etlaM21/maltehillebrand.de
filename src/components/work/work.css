@@ -9,6 +9,6 @@
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em) {
     #work {
-        margin-top: 150px;
+        /* margin-top: 150px; */
     }
 }
