@@ -35,7 +35,7 @@ header .header-wrapper{
     width: calc(100% - 5px);
     max-width: 1080px;
     margin: 0 auto;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 /* Medium devices such as tablets (768px and up) */
@@ -89,7 +89,12 @@ header.minified .header-wrapper .logo svg {
 }
 
 #navwrapper {
-    right: 5px;
+    right: 30px;
+}
+
+#navwrapper nav{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 header .header-wrapper nav a {
@@ -122,11 +127,15 @@ header .header-wrapper nav a.active {
 }
 
 #main-nav {
+    margin-right: 15px;
+}
+
+#main-nav a {
     display: none;
 }
 
-#mobile-nav {
-    display: block;
+#main-nav a.active{
+    display: inline-block;
 }
 
 #mobile-nav .hamburger .line{
@@ -225,12 +234,16 @@ header.minified .header-wrapper #mobile-nav .mobile-menu a {
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em) {
+    #main-nav a{
+        display: inline-block;
+    }
+
     #main-nav {
-        display: block;
+        margin-right: 0;
     }
 
     #mobile-nav {
-        display: none;
+        display: none !important;
     }
 }
 
