@@ -2,7 +2,7 @@
     height: auto;
     width: 100vw;
     position: sticky;
-    top: 50px;
+    top: 25px;
     z-index: 100;
     transition: margin-top 0.2s ease-in-out;
 }
@@ -17,6 +17,10 @@
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em) {
+
+    #filter {
+        top: 50px;
+    }
 
     #filter.minified, #filter.maximized {
         margin-top: -100px;

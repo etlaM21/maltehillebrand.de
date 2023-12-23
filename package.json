@@ -1,6 +1,6 @@
 {
   "name": "maltehillebrand_v2",
-  "homepage":"https://maltehillebrand.de",
+  "homepage": "https://maltehillebrand.de",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
